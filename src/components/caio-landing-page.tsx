@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { ArrowRight, CheckCircle } from 'lucide-react'
 
-export default function Component() {
+export function CaioLandingPage() {
   const [activeSection, setActiveSection] = useState('')
   const containerRef = useRef(null)
   const { scrollYProgress } = useScroll({
