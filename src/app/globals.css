@@ -80,13 +80,12 @@ body {
   }
 }
 
-@layer base {
-  * {
-    @apply border-black;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+* {
+  border: 1px solid black; /* 直接CSSプロパティを使用 */
 }
 
 /* すべての要素のボーダースタイルをリセット */

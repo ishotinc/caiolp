@@ -27,7 +27,6 @@ export default function Component() {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollPos = window.pageYOffset
-      const windowHeight = window.innerHeight
       let current = ''
 
       sections.forEach(section => {
@@ -46,7 +45,7 @@ export default function Component() {
 
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+  }, [sections])
 
   const backgroundY = useTransform(scrollYProgress, [0, 1], ['0%', '100%'])
 
